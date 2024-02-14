@@ -1,0 +1,12 @@
+#parcel
+- dev build
+-HMR- hot module replacement
+-file watching algo
+-image optimization
+-minification
+-bundling
+-compress
+-consistent hashing
+-faster build cause using parcel.cache
+-code splitting
+-differential bundling(support older browser device)
