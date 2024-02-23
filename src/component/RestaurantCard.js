@@ -26,6 +26,7 @@ const RestaurantCard=(props)=>{
 
 
 //hoc
+
  export const withpromotedlabel=(RestaurantCard)=>{
     return(props)=>{
         return (

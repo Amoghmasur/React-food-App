@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 // import resObj from "../utils/mockData";
 import useOnlineStatus from "../utils/useOnlinestatus";
-
+import { swiggy_api , Cors_api} from "../utils/constant";
 import { Link } from "react-router-dom";
-
 
 const Body = () => {
 
@@ -22,7 +21,7 @@ const Body = () => {
     },[])
 
     const fetchData = async () => {
-      const data=await fetch(" https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351828&lng=77.6285228&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data=await fetch(swiggy_api);
 
       const json= await data.json()
       setListOfrestraunt(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -31,8 +30,6 @@ const Body = () => {
     // '?' this is called option chaining
 
     // conditional rendering means- rendering upon the condition of the component
-
-
 
 const onlineStatus=useOnlineStatus()
 if (onlineStatus===false)
@@ -44,6 +41,7 @@ return (<h1>Looks like your're offline</h1>)
     :
     (
         <div className='body'>
+
             <div className='filter flex'>
               <div className="search m-4 p-4">
                 <input type="text" className="border border-solid border-gray-500 rounded-lg px-4 py-2"

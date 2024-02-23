@@ -16,7 +16,6 @@ import appstore from './utils/appstore'
 import Cart from './component/Cart'
 
 
-
 const Grocery=lazy(()=> import("./component/Grocery"))
 
 const AppLayout=()=>{

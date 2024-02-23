@@ -7,3 +7,6 @@ export const swiggy_api='https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.
 
 
 export const Menu_url='https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351828&lng=77.6285228&restaurantId='
+
+
+export const Cors_api='https://corsproxy.org/?'
